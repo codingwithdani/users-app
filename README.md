@@ -1,6 +1,7 @@
 # User App
 
 Aplicación web para el manejo de usuarios.
+https://users-app-sepia.vercel.app/
 
 **Con ella puedes**
 * Listar usuarios y visualizar sus datos
@@ -11,8 +12,8 @@ Aplicación web para el manejo de usuarios.
 ## ¿Cómo lo ejecuto en local?
 
 ```
-yarn install # instalar las dependencias
-npm run dev o yarn start # levantar el entorno de desarrollo
+npm install # instalar las dependencias
+npm run dev o npm start # levantar el entorno de desarrollo
 ```
 
 ## Próximo por hacer
