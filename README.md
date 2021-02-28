@@ -17,8 +17,8 @@ npm run dev o yarn start # levantar el entorno de desarrollo
 
 ## Próximo contenido
 
-- [ ] 🔹 Guardar los usuarios añadidos
-- [ ] 🔹 Eliminar de la lista los usuarios borrados
+- [ ] 🔹 Guardar los usuarios añadidos en local
+- [ ] 🔹 Eliminar de la lista los usuarios borrados en local
 - [ ] 🔹 Traducciones
 - [ ] 🔹 Loaders
 
