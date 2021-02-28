@@ -11,28 +11,33 @@ export const UserCards = () => {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    getUsersList().then(users => {
-      setUsers(users)
-    }).catch(() => {
-      console.log('error getting users')
+    getUsersList().then(setUsers).catch(() => {
+      console.error('error getting users')
+      setUsers([])
     })
   }, [])
 
   return (
     <ContentLayout>
       <ListOfCardsContainer>
-        {users.length && users.map((user) => {
-          return (
-            <CardContainer key={user.id}>
-              <Card name={user.first_name} avatar={user.avatar} id={user.id} />
-              <DeleteButton
-                gap='small'
-                icon={<Trash color='#bbb' size='small' />}
-                onClick={() => deleteUser(user.id)}
-              />
-            </CardContainer>
-          )
-        })}
+        {users.length
+          ? users.map(user => {
+            return (
+              <CardContainer key={user.id}>
+                <Card name={user.first_name} avatar={user.avatar} id={user.id} />
+                <DeleteButton
+                  gap='small'
+                  icon={<Trash color='#bbb' size='small' />}
+                  onClick={() => {
+                    deleteUser(user.id).then(() => {
+                      setUsers(users.filter(u => u.id !== user.id))
+                    })
+                  }}
+                />
+              </CardContainer>
+            )
+          })
+          : 'There are no users'}
       </ListOfCardsContainer>
     </ContentLayout>
   )

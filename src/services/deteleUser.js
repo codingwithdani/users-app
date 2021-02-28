@@ -4,7 +4,4 @@ export const deleteUser = (id) => {
     {
       method: 'DELETE'
     })
-    .then(function (res) { console.log(res) })
-    .catch(function (res) { console.log(res) }
-    )
 }
