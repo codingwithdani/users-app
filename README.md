@@ -15,7 +15,7 @@ yarn install # instalar las dependencias
 npm run dev o yarn start # levantar el entorno de desarrollo
 ```
 
-## Próximo contenido
+## Próximo por hacer
 
 - [ ] 🔹 Guardar los usuarios añadidos en local
 - [ ] 🔹 Eliminar de la lista los usuarios borrados en local
@@ -23,4 +23,3 @@ npm run dev o yarn start # levantar el entorno de desarrollo
 - [ ] 🔹 Loaders
 
 
-y mucho más :P
