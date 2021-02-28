@@ -6,4 +6,10 @@ export const DetailsContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin-top: 40px;
+
+    @media (min-width: 768px) {
+        margin-top: 0
+    }   
+
 `

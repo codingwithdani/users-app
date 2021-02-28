@@ -1,16 +1,18 @@
 import {
   Grommet,
   Sidebar,
-  Button
+  Button,
+  Nav
 } from 'grommet'
 import styled from 'styled-components'
 import { Link } from 'wouter'
 
 export const SideBarContainer = styled(Grommet)`
     color: gray;
-    width: 15%;
-    justify-content: center;
+    
     @media (min-width: 768px) {
+      width: 15%;
+      justify-content: center;
       min-width: 200px;
       top: 56px;
     }
@@ -19,8 +21,13 @@ export const SideBarContainer = styled(Grommet)`
 export const SidebarStyled = styled(Sidebar)`
     background-color: rgb(123,127,190);
     padding: 0;
-    padding-top: 50px;
     width: 100%;
+    @media (min-width: 768px) {
+      padding-top: 50px;
+    }
+    
+ 
+
 `
 
 export const ButtonStyled = styled(Button)`
@@ -40,4 +47,12 @@ export const ButtonStyled = styled(Button)`
 
 export const LinkStyled = styled(Link)`
   width: 100%;
+`
+
+export const NavStyled = styled(Nav)`
+  flex-direction: row;
+  @media (min-width: 768px) {
+      flex-direction: column;
+  }
+
 `

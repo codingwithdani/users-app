@@ -1,14 +1,13 @@
 
 import React from 'react'
 import {
-  Box,
-  Nav
+  Box
 } from 'grommet'
 import {
   Group,
   UserAdd
 } from 'grommet-icons'
-import { SideBarContainer, SidebarStyled, ButtonStyled, LinkStyled } from './styles'
+import { SideBarContainer, SidebarStyled, ButtonStyled, LinkStyled, NavStyled } from './styles'
 
 const SidebarButton = ({ icon, label, src }) => (
   <Box>
@@ -25,10 +24,10 @@ const SidebarButton = ({ icon, label, src }) => (
 )
 
 const MainNavigation = () => (
-  <Nav gap='medium'>
+  <NavStyled gap='medium'>
     <SidebarButton icon={<Group />} label='Users' src='' />
     <SidebarButton icon={<UserAdd />} label='Create User' src='createUser' />
-  </Nav>
+  </NavStyled>
 )
 
 export const SideBar = () => (
