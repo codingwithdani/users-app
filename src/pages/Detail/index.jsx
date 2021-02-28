@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import { DetailsCard } from '../../components/DetailsCard'
 import { DetailsContainer } from './styles'
+import { getSingleUser } from '../../services/getSingleUser'
 export const Detail = ({ detailId }) => {
   const [user, setUser] = React.useState()
-  const getSingleUser = async () => {
-    let singleUser = await window.fetch(`https://reqres.in/api/users/${detailId}`)
-    singleUser = await singleUser.json()
-    setUser(singleUser.data)
-  }
 
   useEffect(() => {
-    getSingleUser()
+    getSingleUser(detailId).then(user => {
+      setUser(user)
+    }).catch(() => {
+      console.log('error getting user')
+    })
   }, [])
 
   return (
