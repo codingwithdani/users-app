@@ -25,7 +25,34 @@
   "eslintConfig": {
     "extends": [
       "./node_modules/standard/eslintrc.json"
-    ]
+    ],
+    "rules": {
+      "import/order": [
+        "warn",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling"
+          ],
+          "alphabetize": {
+            "order": "asc"
+          },
+          "pathGroups": [
+            {
+              "pattern": "react",
+              "group": "builtin",
+              "position": "before"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": [
+            "builtin"
+          ]
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
