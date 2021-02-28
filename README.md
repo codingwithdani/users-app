@@ -1,4 +1,4 @@
-# User App
+# Users App
 
 Aplicación web para el manejo de usuarios.
 https://users-app-sepia.vercel.app/
