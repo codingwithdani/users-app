@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'wouter'
+import { CreateUser } from './pages/CreateUser'
+import { Detail } from './pages/Detail'
+import { UserCards } from './pages/UserCards'
+import { SideBar } from './components/SideBar'
+import { Layout } from './styles-utils'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout className='App'>
+      <SideBar />
+      <Switch>
+        <Route path='/createUser'>
+          <CreateUser />
+        </Route>
+        <Route path='/users'>
+          <UserCards />
+        </Route>
+        <Route path='/detail/:detailId'>
+          {(params) => <Detail detailId={params.detailId} />}
+        </Route>
+        <Route>
+          <img src='https://media.giphy.com/media/jkZtSdwKOx05BOlapR/giphy.gif.com/gifs/jkZtSdwKOx05BOlapR/html5' />
+        </Route>
+      </Switch>
+    </Layout>
+  )
 }
 
-export default App;
+export default App
