@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-import { DeleteButton, ListOfCardsContainer, CardContainer } from './styles'
-import { Card } from '../../components/Card'
-import { ContentLayout } from '../../components/ContentLayout'
+import { Card } from 'components/Card'
+import { ContentLayout } from 'components/ContentLayout'
 import { Trash } from 'grommet-icons'
-import { getUsersList } from '../../services/listOfUsers'
-import { deleteUser } from '../../services/deteleUser'
+import { deleteUser } from 'services/deteleUser'
+import { getUsersList } from 'services/listOfUsers'
+import { DeleteButton, ListOfCardsContainer, CardContainer } from './styles'
 
 export const UserCards = () => {
   const [users, setUsers] = useState([])

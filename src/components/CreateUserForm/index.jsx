@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Box, Form, FormField, TextInput } from 'grommet'
 
+import { createNewsUser } from 'services/createUser'
 import { ButtonStyled, FormContainer, ErrorMessage, SuccessfulMessage } from './styles'
-import { createNewsUser } from '../../services/createUser'
 
 const INITIAL_STATE = { name: '', job: '' }
 

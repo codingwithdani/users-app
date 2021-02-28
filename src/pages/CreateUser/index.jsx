@@ -1,5 +1,5 @@
 import React from 'react'
-import { CreateUserForm } from '../../components/CreateUserForm'
+import { CreateUserForm } from 'components/CreateUserForm'
 import { Box } from 'grommet'
 
 export const CreateUser = () => {

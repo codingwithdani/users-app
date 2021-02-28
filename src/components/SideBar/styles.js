@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-
 import {
   Stack,
   Grommet,
@@ -7,6 +5,7 @@ import {
   Button,
   Text
 } from 'grommet'
+import styled from 'styled-components'
 
 export const SideBarContainer = styled(Grommet)`
     color: gray;

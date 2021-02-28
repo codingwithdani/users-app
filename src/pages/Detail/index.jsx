@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
-import { DetailsCard } from '../../components/DetailsCard'
+import { DetailsCard } from 'components/DetailsCard'
+import { getSingleUser } from 'services/getSingleUser'
 import { DetailsContainer } from './styles'
-import { getSingleUser } from '../../services/getSingleUser'
+
 export const Detail = ({ detailId }) => {
   const [user, setUser] = React.useState()
 

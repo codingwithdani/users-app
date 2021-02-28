@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import { Box } from 'grommet'
+import styled from 'styled-components'
 
 export const CardContent = styled.div`
     display: flex;

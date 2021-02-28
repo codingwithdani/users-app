@@ -1,10 +1,9 @@
 
-import styled from 'styled-components'
-
 import {
   Box,
   Button
 } from 'grommet'
+import styled from 'styled-components'
 
 export const ButtonStyled = styled(Button)`
     color: #ffff;

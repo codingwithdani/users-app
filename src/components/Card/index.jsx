@@ -1,6 +1,6 @@
 import React from 'react'
-import { CardStyled, ImageStyled, CardText } from './styles'
 import { Link } from 'wouter'
+import { CardStyled, ImageStyled, CardText } from './styles'
 
 export const Card = ({ avatar, name, id }) => {
   return (

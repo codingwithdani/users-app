@@ -1,8 +1,8 @@
 import { Route, Switch } from 'wouter'
+import { SideBar } from './components/SideBar'
 import { CreateUser } from './pages/CreateUser'
 import { Detail } from './pages/Detail'
 import { UserCards } from './pages/UserCards'
-import { SideBar } from './components/SideBar'
 import { Layout } from './styles-utils'
 
 function App () {

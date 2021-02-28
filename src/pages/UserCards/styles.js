@@ -1,6 +1,6 @@
 
-import styled from 'styled-components'
 import { Button } from 'grommet'
+import styled from 'styled-components'
 
 export const ListOfCardsContainer = styled.div`
     border-radius: 6px;
