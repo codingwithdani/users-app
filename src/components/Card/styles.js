@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const CardStyled = styled.a`
   align-items: center;
+  color: gray;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  color: gray;
   max-width: 500px;
   padding: 16px 64px 16px 16px;
   text-decoration: none;
@@ -20,9 +20,9 @@ export const CardStyled = styled.a`
 export const CardText = styled.p``
 
 export const ImageStyled = styled.img`
+  background-size: cover;
   border-radius: 50%;
   height: 50px;
-  width: 50px;
-  background-size: cover;
   padding-right: 20px;
+  width: 50px;
 `

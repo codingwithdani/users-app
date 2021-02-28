@@ -13,7 +13,7 @@ function App () {
         <Route path='/createUser'>
           <CreateUser />
         </Route>
-        <Route path='/users'>
+        <Route path='/'>
           <UserCards />
         </Route>
         <Route path='/detail/:detailId'>

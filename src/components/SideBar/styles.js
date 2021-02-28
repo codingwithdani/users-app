@@ -1,15 +1,14 @@
 import {
-  Stack,
   Grommet,
   Sidebar,
-  Button,
-  Text
+  Button
 } from 'grommet'
 import styled from 'styled-components'
+import { Link } from 'wouter'
 
 export const SideBarContainer = styled(Grommet)`
     color: gray;
-    width: 70px;
+    width: 15%;
     justify-content: center;
     @media (min-width: 768px) {
       min-width: 200px;
@@ -18,14 +17,19 @@ export const SideBarContainer = styled(Grommet)`
 `
 
 export const SidebarStyled = styled(Sidebar)`
-    width: 100%;
     background-color: rgb(123,127,190);
+    padding: 0;
     padding-top: 50px;
+    width: 100%;
 `
 
 export const ButtonStyled = styled(Button)`
   color: #ffff;
+  display: flex;
   font-size: 0;
+  justify-content: flex-start;
+  padding: 12px;
+  width: 100%;
   &:hover {
     background: #bbb;
   }
@@ -34,13 +38,6 @@ export const ButtonStyled = styled(Button)`
   }
 `
 
-export const SidebarHeaderText = styled(Text)`
-  font-size: 0;
-  @media (min-width: 768px) {
-      font-size: 14px;
-  }
-`
-
-export const StackStyled = styled(Stack)`
-  right: 10px;
+export const LinkStyled = styled(Link)`
+  width: 100%;
 `
