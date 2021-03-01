@@ -31,7 +31,7 @@ const MainNavigation = () => (
 )
 
 export const SideBar = () => (
-  <SideBarContainer>
+  <SideBarContainer data-testid='sideBar'>
     <SidebarStyled
       responsive={false}
       background='neutral-2'
