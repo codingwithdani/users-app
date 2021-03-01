@@ -22,7 +22,6 @@ export const CardText = styled.p`
     padding-bottom: 10px;
 `
 export const DetailsCardContainer = styled(Box)`
-
     @media (min-width: 768px) {
         min-width: 300px;
         top: 56px;

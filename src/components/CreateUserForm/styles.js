@@ -10,18 +10,6 @@ export const ButtonStyled = styled(Button)`
     font-size: 14px;
 `
 
-export const ErrorMessage = styled.p`
-  color: red;
-  font-size: 12px;
-  margin-bottom: 4px;
-`
-
-export const SuccessfulMessage = styled.p`
-  color: green;
-  font-size: 12px;
-  margin-bottom: 4px;
-`
-
 export const FormContainer = styled(Box)`
   color: gray;
   font-size: 14px;

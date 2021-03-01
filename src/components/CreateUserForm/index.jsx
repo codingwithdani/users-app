@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { Message } from 'components/Message'
 import { Box, Form, FormField, TextInput } from 'grommet'
 
 import { createNewsUser } from 'services/createUser'
-import { ButtonStyled, FormContainer, ErrorMessage, SuccessfulMessage } from './styles'
-
+import { ButtonStyled, FormContainer } from './styles'
 const INITIAL_STATE = { name: '', job: '' }
 
 export const CreateUserForm = () => {
@@ -42,18 +42,14 @@ export const CreateUserForm = () => {
         {
           errors.length
             ? (
-              <Box justify='center' align='center'>
-                {errors.map(error => <ErrorMessage key={error}>{error}</ErrorMessage>)}
-              </Box>
+              <Message color='red' listOfMessages={errors} />
               )
             : null
         }
         {
           success &&
           (
-            <Box justify='center' align='center' color='green'>
-              <SuccessfulMessage>User created successfully</SuccessfulMessage>
-            </Box>
+            <Message color='green' listOfMessages={['User created successfully']} />
           )
         }
         <Box direction='row' justify='center' gap='medium' pad={{ vertical: 'medium' }}>
