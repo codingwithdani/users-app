@@ -3,7 +3,7 @@ import { CardContent, DetailsCardContainer, ImageStyled, CardText } from './styl
 
 export const DetailsCard = ({ avatar, name, email, lastName }) => {
   return (
-    <DetailsCardContainer elevation='large' min-height='460px' justify='center' align='center' background='#ffffff' round='small'>
+    <DetailsCardContainer data-testid='cardDetail' elevation='large' min-height='460px' justify='center' align='center' background='#ffffff' round='small'>
       <CardContent>
         <ImageStyled src={avatar} />
         <CardText>Name:{`${' '}${name}${' '}${lastName}`}</CardText>
