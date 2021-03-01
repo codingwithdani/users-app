@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const ContentLayoutStyles = styled.div`
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     display: grid;
     place-content: center;
     width: 100%;
