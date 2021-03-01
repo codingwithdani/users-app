@@ -1,5 +1,5 @@
 /* global test, describe, expect */
-const { render, screen, fireEvent, waitForElementToBeRemoved } = require('@testing-library/react')
+const { render, screen, fireEvent, waitFor, waitForElementToBeRemoved } = require('@testing-library/react')
 const { Card } = require('../src/components/Card')
 const { CreateUserForm } = require('../src/components/CreateUserForm')
 const { DetailsCard } = require('../src/components/DetailsCard')
@@ -22,10 +22,28 @@ describe('<Card />', () => {
   })
 })
 describe('<CreateUserForm />', () => {
-  test('render create user form without problems', () => {
+  test('render create user form without problems', async () => {
     render(<CreateUserForm />)
     screen.getByLabelText('Name')
     screen.getByLabelText('Job')
+
+    // check introducing data to form
+
+    const inputNodeName = screen.getByLabelText('Name')
+    const inputNodeJob = screen.getByLabelText('Job')
+    fireEvent.change(inputNodeName, { target: { value: 'Janet' } })
+    fireEvent.change(inputNodeJob, { target: { value: 'Astronaut' } })
+
+    fireEvent.click(screen.getByText('Create user'))
+    waitFor(() => screen.getByText('User created successfully'))
+
+    // check without filling the input Job
+
+    const inputNodeForName = screen.getByLabelText('Name')
+    fireEvent.change(inputNodeForName, { target: { value: 'Janet' } })
+
+    fireEvent.click(screen.getByText('Create user'))
+    waitFor(() => screen.getByText('"job" can not be empty'))
   })
 })
 describe('<DetailsCard />', () => {
