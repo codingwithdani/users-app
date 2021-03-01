@@ -2,6 +2,7 @@ import { Route, Switch } from 'wouter'
 import { SideBar } from './components/SideBar'
 import { CreateUser } from './pages/CreateUser'
 import { Detail } from './pages/Detail'
+import { Error404 } from './pages/Error404'
 import { UserCards } from './pages/UserCards'
 import { Layout } from './styles-utils'
 
@@ -20,7 +21,7 @@ function App () {
           {(params) => <Detail detailId={params.detailId} />}
         </Route>
         <Route>
-          <img src='https://media.giphy.com/media/jkZtSdwKOx05BOlapR/giphy.gif.com/gifs/jkZtSdwKOx05BOlapR/html5' />
+          <Error404 />
         </Route>
       </Switch>
     </Layout>
